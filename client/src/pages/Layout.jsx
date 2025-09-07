@@ -3,11 +3,13 @@ import { Outlet, useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { Menu, X } from "lucide-react";
 import Sidebar from "../components/Sidebar";
+import { SignIn, useUser } from "@clerk/clerk-react";
 
 const Layout = () => {
   const navigate = useNavigate();
   const [sidebar, setSidebar] = useState(false);
-  return (
+  const { user } = useUser();
+  return user ? (
     <div className="flex flex-col items-start justify-start h-screen">
       <nav className="w-full px-8 min-h-14 flex items-center justify-between border-b border-gray-200">
         <img src={assets.logo} alt="" onClick={() => navigate("/")} />
@@ -29,6 +31,10 @@ const Layout = () => {
           <Outlet />
         </div>
       </div>
+    </div>
+  ) : (
+    <div className="h-screen flex items-center justify-center">
+      <SignIn />
     </div>
   );
 };
