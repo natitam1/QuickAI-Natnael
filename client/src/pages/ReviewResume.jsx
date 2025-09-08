@@ -1,4 +1,4 @@
-import { Sparkles } from "lucide-react";
+import { FileText, Sparkles } from "lucide-react";
 import React, { useState } from "react";
 
 const ReviewResume = () => {
@@ -31,20 +31,20 @@ const ReviewResume = () => {
         </p>
 
         <button className="w-full flex justify-center items-center gap-2 bg-gradient-to-r from-[#f6ab41] to-[#ff4938] text-white px-4 py-2 mt-6 text-sm rounded-lg cursor-pointer">
-          <Eraser className="w-5" />
-          Remove background
+          <FileText className="w-5" />
+          Review Resume
         </button>
       </form>
       {/* Right col */}
       <div className="w-full max-w-lg p-4 bg-white rounded-lg flex flex-col border border-gray-200 min-h-96">
         <div className="flex items-center gap-3">
-          <Eraser className="w-5 h-5 text-[#ff4938]" />
-          <h1 className="text-xl font-semibold">Processed image</h1>
+          <FileText className="w-5 h-5 text-[#00da83]" />
+          <h1 className="text-xl font-semibold">Analysis Results</h1>
         </div>
         <div className="flex-1 flex justify-center items-center">
           <div className="text-sm flex flex-col items-center gap-5 text-gray-400">
-            <Eraser className="w-9 h-9" />
-            <p>Enter a topic and click "Remove background" to get started</p>
+            <FileText className="w-9 h-9" />
+            <p>Enter a resume and click "Review Resume" to get started</p>
           </div>
         </div>
       </div>
