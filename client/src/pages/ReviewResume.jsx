@@ -30,7 +30,7 @@ const ReviewResume = () => {
           Supports PDF resume only.
         </p>
 
-        <button className="w-full flex justify-center items-center gap-2 bg-gradient-to-r from-[#f6ab41] to-[#ff4938] text-white px-4 py-2 mt-6 text-sm rounded-lg cursor-pointer">
+        <button className="w-full flex justify-center items-center gap-2 bg-gradient-to-r from-[#00da83] to-[#009bbe] text-white px-4 py-2 mt-6 text-sm rounded-lg cursor-pointer">
           <FileText className="w-5" />
           Review Resume
         </button>
